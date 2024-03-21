@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #011228;
+    }
+    .clas{
+        position: relative;
+        background-color: rgb(178, 0, 36);
+        height: 100PX;
+        width: 100px;
+        transform: rotate(-45deg);
+        animation: n 0.5s linear infinite;
+    }
+    @keyframes n{
+        0%{
+            transform: rotate(-45deg) scale(0.8);
+        }
+        50%{
+            transform: rotate(-45deg) scale(1.2);
+        }
+        100%{
+            transform: rotate(-45deg) scale(0.7);
+        }
+    }
+    .clas::before{
+        content: '';
+        position: absolute;
+        background-color: rgb(178, 0, 36);
+        height: 100PX;
+        width: 100px;
+        top: -50%;
+        border-radius: 50px;
+        box-shadow: -20px 20px 90px crimson;
+    }
+    .clas::after{
+        content: '';
+        position: absolute;
+        background-color: rgb(178, 0, 36);
+        height: 100PX;
+        width: 100px;
+        right: -50%;
+        border-radius: 50px;
+        box-shadow: -20px 20px 90px rgb(178, 0, 36);
+    }
+
+</style>
+    </head>
+    <body>
+        <div class="clas"></div>
+    </body>
+</html>
